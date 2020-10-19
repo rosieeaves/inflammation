@@ -18,7 +18,7 @@ def test_daily_mean_zeros():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(np.array([0, 0]), daily_mean(test_array))
 
-@pytest.mark.parameterize(
+@pytest.mark.parametrize(
         'test, expected'
         [
                 ([[0,0],[0,0],[0,0]],[0,0])
@@ -32,7 +32,7 @@ def test_daily_mean():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(np.array(expected), np.array(test))
     
-@pytest.mark.parameterize(
+@pytest.mark.parametrize(
         'test, expected'
         [
                 ([[6,9,-4],[8,12,16],[0,-1,5]],[8,12,16])
@@ -46,7 +46,7 @@ def test_daily_max():
     # Use Numpy testing functions to compare arrays
     npt.assert_array_equal(np.array(expected), np.array(test))
     
-@pytest.mark.parameterize(
+@pytest.mark.parametrize(
         'test, expected'
         [
                 ([[5,9,1],[4,-2,8],[11,6,-7]],[4,-2,-7])
